@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="123" onclick="myclick()">Hello World</p>
+    <script>
+        
+        function demo() {
+            console.log("hello")
+        }
+        
+        function myclick() {
+            // document.body.style.backgroundColor = "#F00";
+            // window.webkit.messageHandlers.native.postMessage({'name': '张三', 'age': 18});
+            // native.hello({'name': '张三', 'age': 18});
+            // native.hello({'name': '张三', 'age': 18, 'callback': demo});
+            // window.webkit.messageHandlers.hello.postMessage(native);
+            // native.hello({name: "张三", age: 18});
+            native.ios.hello({name: "李四", age: 2019});
+            
+            console.log(native);
+            // window.webkit.messageHandlers.hello.postMessage(native);
+        }
+    </script>
+</body>
+</html>
