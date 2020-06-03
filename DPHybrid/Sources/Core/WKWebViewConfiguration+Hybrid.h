@@ -7,6 +7,7 @@
 //
 
 #import <WebKit/WebKit.h>
+#import "HybridFeature.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

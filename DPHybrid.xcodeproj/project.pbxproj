@@ -19,15 +19,9 @@
 		6E0BB097237041BE00EF3B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0BB096237041BE00EF3B2D /* Assets.xcassets */; };
 		6E0BB09A237041BE00EF3B2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0BB098237041BE00EF3B2D /* LaunchScreen.storyboard */; };
 		6E0BB09D237041BE00EF3B2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BB09C237041BE00EF3B2D /* main.m */; };
-		6E0BB0A42370420100EF3B2D /* HybridWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0BB0A22370420100EF3B2D /* HybridWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E0BB0A52370420100EF3B2D /* HybridWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BB0A32370420100EF3B2D /* HybridWebView.m */; };
-		6E0BB0A82370423F00EF3B2D /* HybridWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0BB0A62370423F00EF3B2D /* HybridWebViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E0BB0A92370423F00EF3B2D /* HybridWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BB0A72370423F00EF3B2D /* HybridWebViewController.m */; };
 		6E0BB0AB2370430500EF3B2D /* DPHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0BB049237040EA00EF3B2D /* DPHybrid.framework */; };
 		6E0BB0AC2370430500EF3B2D /* DPHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0BB049237040EA00EF3B2D /* DPHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E0BB0B1237049AE00EF3B2D /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 6E0BB0B0237049AE00EF3B2D /* demo.html */; };
-		6E0BB0B823726B8200EF3B2D /* HybridBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0BB0B623726B8200EF3B2D /* HybridBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E0BB0B923726B8200EF3B2D /* HybridBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BB0B723726B8200EF3B2D /* HybridBuilder.m */; };
 		6E0BB0BB2372741300EF3B2D /* HybridFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0BB0BA2372741300EF3B2D /* HybridFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0BB0C02372BED200EF3B2D /* HybridBlockFeature.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E0BB0BE2372BED200EF3B2D /* HybridBlockFeature.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E0BB0C12372BED200EF3B2D /* HybridBlockFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E0BB0BF2372BED200EF3B2D /* HybridBlockFeature.m */; };
@@ -38,7 +32,7 @@
 		6E6D874F24867C56005D1CD1 /* DPHybrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0BB049237040EA00EF3B2D /* DPHybrid.framework */; };
 		6E6D875024867C56005D1CD1 /* DPHybrid.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0BB049237040EA00EF3B2D /* DPHybrid.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E6D875424867C60005D1CD1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6D874D24867A9A005D1CD1 /* WebKit.framework */; };
-		6E6D875B24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E6D875924868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h */; };
+		6E6D875B24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E6D875924868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E6D875C24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E6D875A24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.m */; };
 /* End PBXBuildFile section */
 
@@ -105,13 +99,7 @@
 		6E0BB099237041BE00EF3B2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E0BB09B237041BE00EF3B2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E0BB09C237041BE00EF3B2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6E0BB0A22370420100EF3B2D /* HybridWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridWebView.h; sourceTree = "<group>"; };
-		6E0BB0A32370420100EF3B2D /* HybridWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridWebView.m; sourceTree = "<group>"; };
-		6E0BB0A62370423F00EF3B2D /* HybridWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridWebViewController.h; sourceTree = "<group>"; };
-		6E0BB0A72370423F00EF3B2D /* HybridWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridWebViewController.m; sourceTree = "<group>"; };
 		6E0BB0B0237049AE00EF3B2D /* demo.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
-		6E0BB0B623726B8200EF3B2D /* HybridBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridBuilder.h; sourceTree = "<group>"; };
-		6E0BB0B723726B8200EF3B2D /* HybridBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridBuilder.m; sourceTree = "<group>"; };
 		6E0BB0BA2372741300EF3B2D /* HybridFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridFeature.h; sourceTree = "<group>"; };
 		6E0BB0BE2372BED200EF3B2D /* HybridBlockFeature.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HybridBlockFeature.h; sourceTree = "<group>"; };
 		6E0BB0BF2372BED200EF3B2D /* HybridBlockFeature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HybridBlockFeature.m; sourceTree = "<group>"; };
@@ -218,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				6E0BB0BC2372BE7700EF3B2D /* Core */,
-				6E6D873A24864569005D1CD1 /* Utilities */,
 				6E0BB0BD2372BE7E00EF3B2D /* Features */,
 			);
 			path = Sources;
@@ -236,12 +223,6 @@
 			isa = PBXGroup;
 			children = (
 				6E0BB0BA2372741300EF3B2D /* HybridFeature.h */,
-				6E0BB0B623726B8200EF3B2D /* HybridBuilder.h */,
-				6E0BB0B723726B8200EF3B2D /* HybridBuilder.m */,
-				6E0BB0A22370420100EF3B2D /* HybridWebView.h */,
-				6E0BB0A32370420100EF3B2D /* HybridWebView.m */,
-				6E0BB0A62370423F00EF3B2D /* HybridWebViewController.h */,
-				6E0BB0A72370423F00EF3B2D /* HybridWebViewController.m */,
 				6E6D875924868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h */,
 				6E6D875A24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.m */,
 				6E6D873B24864599005D1CD1 /* WKUserScript+Hybrid.h */,
@@ -259,13 +240,6 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		6E6D873A24864569005D1CD1 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -273,13 +247,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0BB0A42370420100EF3B2D /* HybridWebView.h in Headers */,
-				6E6D875B24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h in Headers */,
-				6E0BB0A82370423F00EF3B2D /* HybridWebViewController.h in Headers */,
-				6E0BB0B823726B8200EF3B2D /* HybridBuilder.h in Headers */,
 				6E0BB0BB2372741300EF3B2D /* HybridFeature.h in Headers */,
 				6E6D873D24864599005D1CD1 /* WKUserScript+Hybrid.h in Headers */,
 				6E0BB0C02372BED200EF3B2D /* HybridBlockFeature.h in Headers */,
+				6E6D875B24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.h in Headers */,
 				6E0BB04E237040EA00EF3B2D /* DPHybrid.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0BB0B923726B8200EF3B2D /* HybridBuilder.m in Sources */,
 				6E6D873E24864599005D1CD1 /* WKUserScript+Hybrid.m in Sources */,
 				6E6D875C24868072005D1CD1 /* WKWebViewConfiguration+Hybrid.m in Sources */,
-				6E0BB0A52370420100EF3B2D /* HybridWebView.m in Sources */,
-				6E0BB0A92370423F00EF3B2D /* HybridWebViewController.m in Sources */,
 				6E0BB0C12372BED200EF3B2D /* HybridBlockFeature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

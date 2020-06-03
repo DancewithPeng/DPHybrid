@@ -44,12 +44,12 @@
 
 - (WKWebView *)webView {
     if (_webView == nil) {
-        HybridWebViewConfiguration *config = [[HybridWebViewConfiguration alloc] init];
-        [config addFeature:[[HybridBlockFeature alloc] initWithName:@"sayHello" featureActionHandler:^(WKScriptMessage * _Nonnull message) {
-            NSLog(@"Hello World!!!!!");
-        }]];
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+        [configuration addFeatureWithName:@"sayHello" featureActionHandler:^(WKScriptMessage * _Nonnull message) {
+            NSLog(@"啦啦啦 Hello World!");
+        }];
         
-        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
     }
     return _webView;
 }

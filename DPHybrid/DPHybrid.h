@@ -16,10 +16,7 @@ FOUNDATION_EXPORT const unsigned char DPHybridVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DPHybrid/PublicHeader.h>
 
-#import <DPHybrid/HybridBuilder.h>
-#import <DPHybrid/HybridWebView.h>
-#import <DPHybrid/HybridWebViewController.h>
+#import <DPHybrid/HybridFeature.h>
 #import <DPHybrid/WKUserScript+Hybrid.h>
-#import <DPHybrid/HybridConvenientCallScript.h>
+#import <DPHybrid/WKWebViewConfiguration+Hybrid.h>
 #import <DPHybrid/HybridBlockFeature.h>
-#import <DPHybrid/HybridWebViewConfiguration.h>

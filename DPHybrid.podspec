@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint KFZHybrid.podspec' to ensure this is a
+#  Be sure to run `pod spec lint DPHybrid.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,20 +15,20 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "KFZHybrid"
-  spec.version      = "1.0.1"
-  spec.summary      = "可飞猪混合开发框架"
+  spec.name         = "DPHybrid"
+  spec.version      = "1.0.0"
+  spec.summary      = "iOS混合开发工具"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  spec.description  = <<-DESC
-                      可飞猪混合开发框架，封装交互规范，以及基础能力
+  spec.description  = <<-DESC 
+                      iOS混合开发工具，方便处理混合开发中需要的交互
                    DESC
 
-  spec.homepage     = "http://192.168.1.60:81/iOS/Bases/KFZHybrid.git"
+  spec.homepage     = "https://github.com/DancewithPeng/DPHybrid.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.license      = "MIT (example)"
-  spec.license      = { :type => "Copyright", :file => "LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -53,10 +53,10 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "张鹏" => "zhangpeng@kefeizhu.com" }
-  # Or just: spec.author    = "张鹏"
-  # spec.authors            = { "张鹏" => "zhangpeng@kefeizhu.com" }
-  # spec.social_media_url   = "https://twitter.com/张鹏"
+  spec.author             = { "DancewithPeng" => "dancewithpeng@gmail.com" }
+  # Or just: spec.author    = "DancewithPeng"
+  # spec.authors            = { "DancewithPeng" => "dancewithpeng@gmail.com" }
+  # spec.social_media_url   = "https://twitter.com/DancewithPeng"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://192.168.1.60:81/iOS/Bases/KFZHybrid.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/DancewithPeng/DPHybrid.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "KFZHybrid/Sources", "KFZHybrid/Sources/**/*.{h,m}"
+  spec.source_files  = "DPHybrid/Sources", "DPHybrid/Sources/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "KFZHybrid/Sources/**/*.h"
+  # spec.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "HybridFeature.h"
-#import "HybridBuilder.h"
+#import "WKWebViewConfiguration+Hybrid.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -28,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 操作处理器
 @property (nonatomic, copy, readonly) void (^featureActionHandler)(WKScriptMessage *message);
 
+/// 初始化方法
+/// @param name 名字
+/// @param convenientCallIdentifier 便捷调用的标识符
+/// @param featureActionHandler 功能的逻辑处理
 - (instancetype)initWithName:(NSString *)name convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
 
 /// 初始化方法
@@ -37,22 +41,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+/// HybridBlockFeature对WKWebViewConfiguration的扩展
+@interface WKWebViewConfiguration (HybridBlockFeature)
 
-/// `HBBasicFeature`对`HybridBuilder`的扩展
-@interface HybridBuilder (HBBasicFeature)
+/// 添加Feature的便捷方法
+/// @param name Feature的名称
+/// @param convenientCallIdentifier Feature变
+/// @param featureActionHandler 功能的逻辑处理
+- (void)addFeatureWithName:(NSString *)name convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
 
-/// 添加功能
-/// js调用形式: `native.name('{}')`
-/// @param name 功能名称
-/// @param featureActionHandler 功能的操作
-- (void)addFeatureWithName:(NSString *)name featureActionHandler: (nullable void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addFeature(_:featureActionHandler:));
+/// 添加Feature的便捷方法
+/// @param name Feature的名称
+/// @param featureActionHandler 功能的逻辑处理
+- (void)addFeatureWithName:(NSString *)name featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
 
-/// 添加iOS平台特有的功能
-/// js调用形式: `native.ios.name('{}')`
-/// @param name 功能名称
-/// @param featureActionHandler 功能的操作
-- (void)addSpecificFeatureWithName:(NSString *)name featureActionHandler: (nullable void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addSpecificFeature(_:featureActionHandler:));
- 
 @end
 
 NS_ASSUME_NONNULL_END

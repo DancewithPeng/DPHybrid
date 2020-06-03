@@ -37,17 +37,17 @@
 
 @end
 
-@implementation HybridBuilder (HBBasicFeature)
+#pragma mark - WKWebViewConfiguration (HybridBlockFeature)
 
-/*
-- (void)addFeatureWithName:(NSString *)name featureActionHandler:(void (^)(WKScriptMessage * _Nonnull))featureActionHandler {
-    HBBasicFeature *feature = [[HBBasicFeature alloc] initWithName:name featureActionHandler:featureActionHandler];
-    [self addFeature:feature];
+/// HybridBlockFeature对WKWebViewConfiguration的扩展
+@implementation WKWebViewConfiguration (HybridBlockFeature)
+
+- (void)addFeatureWithName:(NSString *)name convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler {
+    [self addFeature:[[HybridBlockFeature alloc] initWithName:name convenientCallIdentifier:convenientCallIdentifier featureActionHandler:featureActionHandler]];
 }
 
-- (void)addSpecificFeatureWithName:(NSString *)name featureActionHandler:(void (^)(WKScriptMessage * _Nonnull))featureActionHandler {
-    HBBasicFeature *feature = [[HBBasicFeature alloc] initWithName:name featureActionHandler:featureActionHandler];
-    [self addSpecificFeature:feature];
-}*/
+- (void)addFeatureWithName:(NSString *)name featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler {
+    [self addFeatureWithName:name convenientCallIdentifier:nil featureActionHandler:featureActionHandler];
+}
 
 @end
