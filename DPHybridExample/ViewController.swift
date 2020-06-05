@@ -9,37 +9,48 @@
 import UIKit
 import DPHybrid
 
-
-class ViewController: UIViewController, WKScriptMessageHandler {
+class ViewController: UIViewController {
     
-    weak var webPage: HybridWebViewController?
+    lazy var webView: WKWebView = {
+        let configuration = WKWebViewConfiguration()
+        configuration.addFeature(withName: "takePhoto") { (message) in
+            // 原生处理拍照逻辑
+            print("拍照片啦：\(message.body)")
+        }
+        configuration.add(WKUserScript(source: "function hello() { alert('Hello World'!); }"))
+        let wbv = WKWebView(frame: view.bounds, configuration: configuration)
+        return wbv;
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let script = HybridConvenientCallScript(featureName: "takePhoto", convenientCallIdentifier: "native.ios.")
-        print(script.source)
+        view.addSubview(webView)
+        
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        webView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        let request = URLRequest(url: URL(string: "https://www.baidu.com")!)
+        webView.load(request)
     }
     
-    @objc
-    func excuteScriptButtonDidTap(_ sender: Any?) {
-        webPage?.webView.evaluateJavaScript("my_action();", completionHandler: { (result, error) in
-            if let err = error {
-                print(err)
+    @IBAction func triggleButtonDidTap(_ sender: Any) {
+//        let paras = ["name": "asdfs", "age": 18];
+        webView.evaluateJavaScript("takePhoto('hello', 'world');") { (result, error) in
+            guard let ret = result else {
+                if let err = error {
+                    print(err)
+                } else {
+                    print("empty result")
+                }
+                return
             }
-        })
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let webPage = segue.destination as? HybridWebViewController {
-            webPage.defaultURL = Bundle.main.url(forResource: "demo", withExtension: "html")
-            self.webPage = webPage
-            webPage.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Excute", style: .plain, target: self, action: #selector(excuteScriptButtonDidTap(_:)))
+            
+            print(ret)
         }
-    }
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message.body)
     }
 }
 

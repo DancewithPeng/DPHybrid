@@ -12,40 +12,73 @@
 ## 安装
 - CocoaPods
 ```podfile
-pod 'DPHybrid', '~> 1.0.0'
+pod 'DPHybrid', '~> 1.0.1'
 ```
 
 
 
 ## 使用
 
-首先需要用`HybridBuilder`添加js调用的能力
+### 添加原生能力
+
 ```swift
-HybridBuilder.shared.addFeature("hello") { (message) in
-    print("Hello!!!")
+let configuration = WKWebViewConfiguration()
+configuration.addFeature(withName: "takePhoto") { (message) in
+		// 原生处理拍照逻辑...
 }
-```
-对应的js调用方式为
-```js
-native.hello();
+let webView = WKWebView(frame: ..., configuration: configuration)
 ```
 
-然后在用`HybridWebView`或`WKWebView`来展示网页即可
-
-
-
-### HybridWebView
+### 注入JS代码
 
 ```swift
-let webView = HybridWebView()
-webView.loadRequest(...)
+let configuration = WKWebViewConfiguration()
+configuration.add(WKUserScript(source: "function hello() { alert('Hello World!'); }"))
+let webView = WKWebView(frame: ..., configuration: configuration)
 ```
 
 
 
-### WKWebView
+## LICENSE
 
-```swift
-let webView = WKWebView(frame: .zero, configuration: HybridBuilder.shared.configuration)
-webView.loadRequest(...)
-```# DPHybrid
+MIT License
+
+
+
+Copyright (c) 2020 DP
+
+
+
+Permissionis hereby granted, free of charge, to any person obtaining a copy
+
+of this software and associated documentation files (the "Software"), to deal
+
+in the Software without restriction, including without limitation the rights
+
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+
+copies of the Software, and to permit persons to whom the Software is
+
+furnished to do so, subject to the following conditions:
+
+
+
+The above copyright notice and this permission notice shall be included in all
+
+copies or substantial portions of the Software.
+
+
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+
+SOFTWARE.
