@@ -12,7 +12,7 @@
 ## 安装
 - CocoaPods
 ```podfile
-pod 'DPHybrid', '~> 1.0.1'
+pod 'DPHybrid', '~> 1.1.0'
 ```
 
 
