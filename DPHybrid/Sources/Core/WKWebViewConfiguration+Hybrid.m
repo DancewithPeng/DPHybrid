@@ -2,8 +2,8 @@
 //  WKWebViewConfiguration+Hybrid.m
 //  DPHybrid
 //
-//  Created by 张鹏 on 2020/6/2.
-//  Copyright © 2020 深圳可飞猪科技有限公司. All rights reserved.
+//  Created by DP on 2020/6/2.
+//  Copyright © 2020 dancewithpeng@gmail.com. All rights reserved.
 //
 
 #import "WKWebViewConfiguration+Hybrid.h"
@@ -45,7 +45,11 @@
         
         [scripts appendString:@"\n"];
         
-        lastObject = object;
+        if (lastObject) {
+            lastObject = [lastObject stringByAppendingFormat:@".%@", object];
+        } else {
+            lastObject = object;
+        }
     }
     
     NSString *callFunctionName = feature.name;
@@ -56,7 +60,7 @@
             callFunctionName = [NSString stringWithFormat:@"%@.%@", feature.convenientCallIdentifier, feature.name];
         }
     }
-    [scripts appendFormat:@"%@ = function(params) { window.webkit.messageHandlers.%@.postMessage(params); }", callFunctionName, feature.name];
+    [scripts appendFormat:@"%@ = function(...args) { window.webkit.messageHandlers.%@.postMessage(args); }", callFunctionName, feature.name];
     
     return [[WKUserScript alloc] initWithSource:scripts injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
 }

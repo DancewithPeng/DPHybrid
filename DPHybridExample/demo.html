@@ -13,6 +13,10 @@
         function demo() {
             console.log("hello")
         }
+    
+        function jump(...args) {
+            window.webkit.messageHandlers.hello.postMessage(args);
+        }
         
         function myclick() {
             // document.body.style.backgroundColor = "#F00";
@@ -21,10 +25,13 @@
             // native.hello({'name': '张三', 'age': 18, 'callback': demo});
             // window.webkit.messageHandlers.hello.postMessage(native);
             // native.hello({name: "张三", age: 18});
-            native.ios.hello({name: "李四", age: 2019});
+            // native.ios.hello({name: "李四", age: 2019});
             
-            console.log(native);
-            // window.webkit.messageHandlers.hello.postMessage(native);
+            // console.log(native);
+            
+            // window.webkit.messageHandlers.hello.postMessage('a', 'b', 'c', 'd');
+            // jump('a');
+            jump();
         }
     </script>
 </body>

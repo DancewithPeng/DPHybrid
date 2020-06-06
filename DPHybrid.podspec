@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DPHybrid"
-  spec.version      = "1.0.2"
+  spec.version      = "1.1"
   spec.summary      = "iOS混合开发工具"
 
   # This description is used to generate tags and improve search results.
@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "10.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "DPHybrid/Sources", "DPHybrid/Sources/**/*.{h,m}", "DPHybrid/*.h"
+  spec.source_files  = "DPHybrid/Sources", "DPHybrid/Sources/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "DPHybrid/**/*.h", "DPHybrid/*.h"
+  # spec.public_header_files = "DPHybrid/**/*.h", "DPHybrid/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

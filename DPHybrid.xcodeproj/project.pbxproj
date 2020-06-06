@@ -165,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				6E0BB0A1237041C600EF3B2D /* Sources */,
-				6E0BB04C237040EA00EF3B2D /* DPHybrid.h */,
 				6E0BB04D237040EA00EF3B2D /* Info.plist */,
 			);
 			path = DPHybrid;
@@ -207,6 +206,7 @@
 			children = (
 				6E0BB0BC2372BE7700EF3B2D /* Core */,
 				6E0BB0BD2372BE7E00EF3B2D /* Features */,
+				6E0BB04C237040EA00EF3B2D /* DPHybrid.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1140;
-				ORGANIZATIONNAME = "深圳可飞猪科技有限公司";
+				ORGANIZATIONNAME = "dancewithpeng@gmail.com";
 				TargetAttributes = {
 					6E0BB048237040EA00EF3B2D = {
 						CreatedOnToolsVersion = 11.1;
@@ -597,7 +597,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DPHybrid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,7 +624,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DPHybrid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

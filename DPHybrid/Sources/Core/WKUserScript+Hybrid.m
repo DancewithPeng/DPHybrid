@@ -2,8 +2,8 @@
 //  WKUserScript+Hybrid.m
 //  DPHybrid
 //
-//  Created by 张鹏 on 2020/6/2.
-//  Copyright © 2020 深圳可飞猪科技有限公司. All rights reserved.
+//  Created by DP on 2020/6/2.
+//  Copyright © 2020 dancewithpeng@gmail.com. All rights reserved.
 //
 
 #import "WKUserScript+Hybrid.h"
