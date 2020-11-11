@@ -25,8 +25,9 @@ class ViewController: UIViewController, WKScriptMessageHandler {
 //        configuration.userContentController.add(self, name: "hello");
 //        configuration.addFeature(withName: "myHello") { (message) in
 //            print("阿啦啦啦\(message.body)")
-//        }                
-                
+//        }
+        
+        configuration.userContentController.add(self, name: "myJSFunc")
         configuration.addFeature("myHello", convenientCallIdentifier: "myJS.myCall.test.demo") { (message) in
             print("阿啦啦啦\(message.body)")
         }

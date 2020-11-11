@@ -17,12 +17,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param sourceFilePath JS源文件名
 /// @param injectionTime JS代码注入时机
 /// @param forMainFrameOnly 是否只作用于MainFrame
-- (nullable instancetype)initWithSourceFile:(NSString *)sourceFilePath injectionTime:(WKUserScriptInjectionTime)injectionTime forMainFrameOnly:(BOOL)forMainFrameOnly;
+- (nullable instancetype)initWithSourceFile:(NSString *)sourceFilePath
+                              injectionTime:(WKUserScriptInjectionTime)injectionTime
+                           forMainFrameOnly:(BOOL)forMainFrameOnly;
 
 /// 根据JS源文件进行初始化
 /// @param sourceFilePath JS源文件名
 /// @param injectionTime JS代码注入时机
-- (nullable instancetype)initWithSourceFile:(NSString *)sourceFilePath injectionTime:(WKUserScriptInjectionTime)injectionTime;
+- (nullable instancetype)initWithSourceFile:(NSString *)sourceFilePath
+                              injectionTime:(WKUserScriptInjectionTime)injectionTime;
 
 /// 根据JS源文件进行初始化
 /// @param sourceFilePath JS源文件名
@@ -32,12 +35,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param source JS脚本
 /// @param injectionTime JS代码注入时机
 /// @param forMainFrameOnly 是否只作用于MainFrame
-+ (instancetype)scriptWithSource:(NSString *)source injectionTime:(WKUserScriptInjectionTime)injectionTime forMainFrameOnly:(BOOL)forMainFrameOnly;
++ (instancetype)scriptWithSource:(NSString *)source
+                   injectionTime:(WKUserScriptInjectionTime)injectionTime
+                forMainFrameOnly:(BOOL)forMainFrameOnly;
 
 /// 便捷方法创建WKUserScript对象
 /// @param source JS脚本
 /// @param injectionTime JS代码注入时机
-+ (instancetype)scriptWithSource:(NSString *)source injectionTime:(WKUserScriptInjectionTime)injectionTime;
++ (instancetype)scriptWithSource:(NSString *)source
+                   injectionTime:(WKUserScriptInjectionTime)injectionTime;
 
 /// 便捷方法创建WKUserScript对象
 /// @param source JS脚本

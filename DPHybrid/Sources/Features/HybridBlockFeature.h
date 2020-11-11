@@ -32,12 +32,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param name 名字
 /// @param convenientCallIdentifier 便捷调用的标识符
 /// @param featureActionHandler 功能的逻辑处理，需要调用方处理Block循环引用的问题
-- (instancetype)initWithName:(NSString *)name convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
+- (instancetype)initWithName:(NSString *)name
+    convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier
+        featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
 
 /// 初始化方法
 /// @param name 名字
 /// @param featureActionHandler 功能操作处理器，需要调用方处理Block循环引用的问题
-- (instancetype)initWithName:(NSString *)name featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
+- (instancetype)initWithName:(NSString *)name
+        featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler;
 
 @end
 
@@ -48,12 +51,15 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param name Feature的名称
 /// @param convenientCallIdentifier Feature变
 /// @param featureActionHandler 功能的逻辑处理，需要调用方处理Block循环引用的问题
-- (void)addFeatureWithName:(NSString *)name convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addFeature(_:convenientCallIdentifier:featureActionHandler:));
+- (void)addFeatureWithName:(NSString *)name
+  convenientCallIdentifier:(nullable NSString *)convenientCallIdentifier
+      featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addFeature(_:convenientCallIdentifier:featureActionHandler:));
 
 /// 添加Feature的便捷方法
 /// @param name Feature的名称
 /// @param featureActionHandler 功能的逻辑处理，需要调用方处理Block循环引用的问题
-- (void)addFeatureWithName:(NSString *)name featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addFeature(_:featureActionHandler:));
+- (void)addFeatureWithName:(NSString *)name
+      featureActionHandler: (void (^)(WKScriptMessage *))featureActionHandler NS_SWIFT_NAME(addFeature(_:featureActionHandler:));
 
 @end
 
