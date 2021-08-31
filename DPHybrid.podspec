@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DPHybrid"
-  spec.version      = "1.1"
+  spec.version      = "1.1.1"
   spec.summary      = "iOS混合开发工具"
 
   # This description is used to generate tags and improve search results.
