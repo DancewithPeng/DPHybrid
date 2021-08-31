@@ -38,9 +38,9 @@
             continue;
         }
         if (lastObject == nil || lastObject.length <= 0) {
-            [scripts appendFormat:@"if (%@ == undefined || isNaN(%@)) { var %@ = {}; }", object, object, object];
+            [scripts appendFormat:@"if (!%@) { var %@ = {}; }", object, object];
         } else {
-            [scripts appendFormat:@"if (%@.%@ == undefined || isNaN(%@.%@)) { %@.%@ = {}; }", lastObject, object, lastObject, object, lastObject, object];
+            [scripts appendFormat:@"if (!%@.%@) { %@.%@ = {}; }", lastObject, object, lastObject, object];
         }
         
         [scripts appendString:@"\n"];

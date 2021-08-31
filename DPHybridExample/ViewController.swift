@@ -32,6 +32,10 @@ class ViewController: UIViewController, WKScriptMessageHandler {
             print("阿啦啦啦\(message.body)")
         }
         
+        configuration.addFeature("myHello2", convenientCallIdentifier: "myJS.myCall.test.demo") { (message) in
+            print("myHello2 - 阿啦啦啦\(message.body)")
+        }
+        
         let wbv = WKWebView(frame: view.bounds, configuration: configuration)
         return wbv;
     }()
